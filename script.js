@@ -8,7 +8,7 @@ var buttonElement = document.querySelector("#button");
 function handleSubmit(event){
 	event.preventDefault();
 
-	var h3Value = "https://localhost:8080/";
+	var h3Value = 'https://localhost:8080/';
 	var name = nameElement.value;
 	var year = yearElement.value;
 
@@ -20,8 +20,8 @@ function handleSubmit(event){
 	}
 	else if(name && !year)
 	{
-		h3Value += `&name` + name;
+		h3Value += `?name=` + name;
 	}
-	h3textContent = h3Value.value;
+	h3.textContent = h3Value;
 }
-form.addEventListener('Submit',handleSubmit);
+form.addEventListener('submit',handleSubmit);
